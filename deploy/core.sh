@@ -119,8 +119,8 @@ fi
 git fetch --all
 git -c advice.detachedHead=false checkout origin/$PROMOTE_FROM_BRANCH
 git checkout -B $PROMOTE_DEST_BRANCH
-git tag $RELEASE_TAG
 git push --force origin $PROMOTE_DEST_BRANCH
+git tag $RELEASE_TAG
 git push --tags
 
 if [[ $NO_DEPLOY == "--no-deploy" ]]; then
