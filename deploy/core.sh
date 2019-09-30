@@ -55,16 +55,16 @@ fi
 #    exit 1
 # fi
 
-if [[ $SKIP_ACCOUNT_VERIFICATION != "--skip-account-verification" ]]; then
-    echo "Please review and confirm your active AWS account configuration:"
-    aws configure list
-    aws sts get-caller-identity
-    aws iam list-account-aliases
-    echo "Is this correct?"
-    select result in Yes No; do
-        if [[ $result != Yes ]]; then exit 1; else break; fi
-    done
-fi
+# if [[ $SKIP_ACCOUNT_VERIFICATION != "--skip-account-verification" ]]; then
+#    echo "Please review and confirm your active AWS account configuration:"
+#    aws configure list
+#    aws sts get-caller-identity
+#    aws iam list-account-aliases
+#    echo "Is this correct?"
+#    select result in Yes No; do
+#        if [[ $result != Yes ]]; then exit 1; else break; fi
+#    done
+# fi
 
 if ! git diff-index --quiet HEAD --; then
     if [[ $FORCE == "--force" ]]; then
