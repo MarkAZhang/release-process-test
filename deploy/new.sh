@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "HERE"
-
 if ! git diff-index --quiet HEAD --; then
   echo "Your repo has unsaved changes. Aborting."
   exit 1
