@@ -31,6 +31,6 @@ git rebase origin/$dest_branch
 
 # Create a new branch for the cherry-pick.
 DIRECTORY=`dirname $0`
-$DIRECTORY/new.sh $dest_branch "cherrypick" "cherrypick-${hash}"
+$DIRECTORY/new.sh $dest_branch "cherrypick" "cherrypick-to-${dest_branch}-${hash}"
 
 git cherry-pick $hash
