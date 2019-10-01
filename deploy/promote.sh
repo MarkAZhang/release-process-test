@@ -1,4 +1,5 @@
 #!/bin/bash
+DIRECTORY=`dirname $0`
 
 # Adapted from https://github.com/HumanCellAtlas/query-service/blob/master/scripts/release.sh
 
@@ -98,7 +99,7 @@ export PROMOTE_FROM_BRANCH=$1 PROMOTE_DEST_BRANCH=$2
 #    fi
 # fi
 
-RELEASE_TAG=$(date -u +"%Y-%m-%d-%H-%M-%S")-${PROMOTE_DEST_BRANCH}.release
+RELEASE_TAG=$($DIRECTORY/get_tag.sh $PROMOTE_FROM_BRANCH)
 
 if [[ "$(git --no-pager log --graph --abbrev-commit --pretty=oneline --no-merges -- $PROMOTE_DEST_BRANCH ^$PROMOTE_FROM_BRANCH)" != "" ]]; then
     echo "Warning: The following commits are present on $PROMOTE_DEST_BRANCH but not on $PROMOTE_FROM_BRANCH"
