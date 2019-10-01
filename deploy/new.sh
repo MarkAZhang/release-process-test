@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if ! git diff-index --quiet HEAD --; then
-  echo "Your repo has unsaved changes. Aborting."
+  echo "Your repo has unsaved changes. Try stashing them."
   exit 1
 fi
 

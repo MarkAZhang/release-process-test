@@ -13,7 +13,7 @@ git push $FORCE origin $cur_branch
 
 if [ $? -ne 0 ]
 then
-  echo "There was an error pushing your changes to Github. Aborting."
+  echo "There was an error pushing your changes to Github."
   exit 1;
 fi
 
