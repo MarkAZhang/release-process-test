@@ -10,7 +10,7 @@ last_tag=$(git describe --tag --abbrev=0)
 
 regex="v0\.(d+).*"
 
-if [[ last_tag =~ $regex ]]; then
+if [[ $last_tag =~ $regex ]]; then
   version=${BASH_REMATCH[1]}
 else
   version=0
