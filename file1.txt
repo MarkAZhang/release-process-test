@@ -2,6 +2,6 @@ This is feature one.
 This is feature two.
 This is feature three. Release fix for feature three!
 This is feature four.
-This is feature five. Fix for feature five.
+This is feature five. Fix for feature five. Another fix.
 This is feature six.
 This is feature seven.
