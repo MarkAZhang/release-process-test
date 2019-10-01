@@ -4,3 +4,4 @@ This is feature three. Release fix for feature three!
 This is feature four.
 This is feature five.
 This is feature six.
+This is feature seven.
